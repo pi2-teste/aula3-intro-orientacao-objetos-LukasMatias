@@ -1,60 +1,66 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.senac.sp.aula3;
 
-/**
- *
- * @author lukas.mpereira
- */
+// Classe para criar um Carro
 public class Carro {
 
-    private String cor, fabricante, Modelo,gasolina;
-    private int velocidadeAtual;
-
+    // atributos do Carro
+    private String cor, fabricante, modelo;
+    private int Combustivel=0, gasolina = 20;
+    public int max_gasolina = 40;
     String[] rodas = new String[4];
 
-    public Carro() {
-
+    // método para configurar o modelo do carro
+    void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
-    Carro(int i) {
-        
+    // método para recuperar o modelo do carro
+    String getModelo() {
+        return this.modelo;
     }
 
-    public String getCor(String cor) {
-        return cor;
-    }
-
+    // método para configurar  a cor do carro
     public void setCor(String pCor) {
         this.cor = pCor;
     }
 
-    String getModelo() {
-        return this.Modelo;
-
-    }
-
+    // método para recuperar a cor do carro
     String getCor() {
         return cor;
     }
 
+    // método para configurar a gasolina do caaro
+    public void setGasolina(int gasolina) {
+        this.gasolina = gasolina;
+    }
 
-   String descreve() {
+    // método para recuperar a quantidade de gasolina disponivel do carro
+    int getGasolina() {
+        return gasolina;
+    }
 
-        if (this.Modelo == null) {
+    // metodo para descrever o carro
+    String descreve() {
+
+        if (this.modelo == null) {
             return "Um carro";
         }
         if (this.cor == null) {
-            return "Um " + this.Modelo;
+            return "Um " + this.modelo;
 
         }
-        return "Um " + this.Modelo + " na cor " + this.cor;
+        return "Um " + this.modelo + " na cor " + this.cor;
     }
 
-    void setModelo(String seuOutroModelo) {
-        this.Modelo = seuOutroModelo;
+    // método para abastecer o tanque do carro
+    void abastece(int litros) {
+        gasolina += litros;
+        if (gasolina > 40) {
+            gasolina = max_gasolina;
+
+        }
+
     }
+
+ 
 }

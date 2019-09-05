@@ -52,7 +52,7 @@ public class Main {
         System.out.println("Parabéns, o teste da descrição está correto!");
     }
 
-    /*
+    
     public static void testar_gasolina1() {
         Carro carro1 = new Carro();
         assertEqual(carro1.getGasolina(), 20);
@@ -71,7 +71,7 @@ public class Main {
         System.out.println("Parabéns, o teste 2 da gasolina está correto!");
     }
 
-    public static void testar_max_gasolina() {
+    /* public static void testar_max_gasolina() {
         Carro carro1 = new Carro(30);
         Carro carro2 = new Carro(50);
         assertEqual(carro1.getGasolina(), 20);
@@ -92,16 +92,16 @@ public class Main {
         testar_descricao();
         //Instancio o objeto da classe Carro
         Carro meuCarro = new Carro();
-        meuCarro.setModelo("SeuModeloDeCarroFavorito");
+        meuCarro.setModelo("Nissan 350z");
         //Instancio outro objeto da classe Carro
         Carro carroRodizio = new Carro();
-        carroRodizio.setModelo("SeuOutroModelo");
-        carroRodizio.setCor("SuaCorFavorita ");
+        carroRodizio.setModelo("Lancer evolution");
+        carroRodizio.setCor("preto ");
 
         JOptionPane.showMessageDialog(null, carroRodizio.getModelo() + " - " + carroRodizio.getCor());
-        //testar_gasolina1();
-        // testar_gasolina2();
-        //testar_max_gasolina();
+        testar_gasolina1();
+         testar_gasolina2();
+       // testar_max_gasolina();
 
     }
 
